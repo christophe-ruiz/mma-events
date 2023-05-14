@@ -19,6 +19,7 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 
 app.use('/api', protect);
+
 // app.use('/api/user', userRouter);
 //
 // app.post('/signup', async (req, res) => {
