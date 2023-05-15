@@ -88,6 +88,16 @@ export class UfcCrawlerService implements CrawlerInterface {
   }
 
   async getEvents(): Promise<any> {
+    const events = await Promise.all([
+      this.getUpcomingEvents(),
+      this.getPastEvents(),
+    ]).then((res) => {
+      return res[0].concat(res[1]).sort((a, b) => b.date - a.date);
+    });
+    return events;
+  }
+
+  async getUpcomingEvents(): Promise<any> {
     // Uses axios and cheerio to get the events on ufc site
     const res = await axios.get('https://www.ufc.com/events');
     const $ = cheerio.load(res.data);
@@ -119,7 +129,41 @@ export class UfcCrawlerService implements CrawlerInterface {
       })
       .get();
 
-    // Return the events
+    return events;
+  }
+
+  async getPastEvents(): Promise<any> {
+    // Uses axios and cheerio to get the events on ufc site
+    const res = await axios.get('https://www.ufc.com/events');
+    const $ = cheerio.load(res.data);
+    const events = $('#events-list-past .c-card-event--result ')
+      .map((i, el) => {
+        // Get the data from each event
+        const titleTag = $(el).find('.c-card-event--result__headline > a');
+        const name =
+          this.getTitleFromURL(titleTag.attr('href')) + ' - ' + titleTag.text();
+        const date = $(el)
+          .find('.c-card-event--result__date')
+          .attr('data-main-card-timestamp');
+        // accumulates all span in the selector
+        const city = $(el)
+          .find('.c-card-event--result__location span')
+          .map((index, element) => $(element).text())
+          .get()
+          .join(', ');
+        const location =
+          $(el).find('.c-card-event--result__location h5').text().trim() +
+          ' (' +
+          city +
+          ')';
+        return {
+          name,
+          date,
+          location,
+        };
+      })
+      .get();
+
     return events;
   }
 
