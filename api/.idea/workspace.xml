@@ -15,11 +15,11 @@
       <change afterPath="$PROJECT_DIR$/src/app.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/app.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/crawlers/ufc.crawler.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/models/crawler.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/organization.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/organization.interface.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/ufc/ufc.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ufccrawler/ufc-crawler.service.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/app.e2e-spec.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/jest-e2e.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tsconfig.build.json" afterDir="false" />
@@ -48,21 +48,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "D:\\Projets\\mma-events\\api\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Projets\\mma-events\\api\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -71,7 +71,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684061576418</updated>
-      <workItem from="1684061577436" duration="7129000" />
+      <workItem from="1684061577436" duration="7722000" />
+      <workItem from="1684175782546" duration="6964000" />
     </task>
     <servers />
   </component>
