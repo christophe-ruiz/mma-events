@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { UfcCrawlerService } from '../ufccrawler/ufc-crawler.service';
+import { UfcCrawlerService } from '../../services/ufccrawler/ufc-crawler.service';
 
 @Controller('ufc')
 export class UfcController {

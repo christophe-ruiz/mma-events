@@ -1,21 +1,22 @@
 import { Injectable } from '@nestjs/common';
-import { CrawlerInterface } from '../models/crawler.interface';
-import { OrganizationInterface } from '../models/organization.interface';
+import { CrawlerInterface } from '../../models/crawler.interface';
+import { OrganizationInterface } from '../../models/organization.interface';
 import axios from 'axios';
 import cheerio from 'cheerio';
+import { EventInterface } from '../../models/event.interface';
 
 @Injectable()
 export class UfcCrawlerService implements CrawlerInterface {
   organization: OrganizationInterface = {
-    url: 'https://www.ufc.com/',
+    url: 'https://www.ufc.com',
     logo: 'https://www.ufc.com/themes/custom/ufc/images/ufc-logo.svg',
     location: 'Las Vegas, Nevada',
     description:
       'The Ultimate Fighting Championship is an American mixed martial arts promotion company based in Las Vegas, Nevada, which is owned and operated by Endeavor Group Holdings along with Silver Lake Partners, Kohlberg Kravis Roberts and MSD Capital via Zuffa, LLC.',
-    website: 'https://www.ufc.com/',
+    website: 'https://www.ufc.com',
     twitter: 'https://twitter.com/ufc',
-    facebook: 'https://www.facebook.com/UFC/',
-    instagram: 'https://www.instagram.com/ufc/',
+    facebook: 'https://www.facebook.com/UFC',
+    instagram: 'https://www.instagram.com/ufc',
     youtube: 'https://www.youtube.com/user/UFC',
     created_at: '2000-11-12T00:00:00.000Z',
     updated_at: '2021-03-26T19:00:00.000Z',
@@ -50,7 +51,7 @@ export class UfcCrawlerService implements CrawlerInterface {
     // Uses axios and cheerio to get the athletes from the category page
     return axios
       .get(
-        `https://www.ufc.com/athletes/all?filters%5B0%5D=category%3A${category}&page=0`,
+        `${this.organization.url}/athletes/all?filters%5B0%5D=category%3A${category}&page=0`,
       )
       .then((res) => {
         const $ = cheerio.load(res.data);
@@ -87,21 +88,22 @@ export class UfcCrawlerService implements CrawlerInterface {
     return Promise.resolve(undefined);
   }
 
-  async getEvents(): Promise<any> {
-    const events = await Promise.all([
+  async getEvents(): Promise<EventInterface[]> {
+    return await Promise.all([
       this.getUpcomingEvents(),
       this.getPastEvents(),
     ]).then((res) => {
-      return res[0].concat(res[1]).sort((a, b) => b.date - a.date);
+      return res[0]
+        .concat(res[1])
+        .sort((a, b) => Number(b.date) - Number(a.date));
     });
-    return events;
   }
 
-  async getUpcomingEvents(): Promise<any> {
+  async getUpcomingEvents(): Promise<EventInterface[]> {
     // Uses axios and cheerio to get the events on ufc site
     const res = await axios.get('https://www.ufc.com/events');
     const $ = cheerio.load(res.data);
-    const events = $('#events-list-upcoming .c-card-event--result ')
+    return $('#events-list-upcoming .c-card-event--result ')
       .map((i, el) => {
         // Get the data from each event
         const titleTag = $(el).find('.c-card-event--result__headline > a');
@@ -122,17 +124,15 @@ export class UfcCrawlerService implements CrawlerInterface {
           city +
           ')';
         return {
-          name,
-          date,
-          location,
+          name: name,
+          date: Number(date),
+          location: location,
         };
       })
       .get();
-
-    return events;
   }
 
-  async getPastEvents(): Promise<any> {
+  async getPastEvents(): Promise<EventInterface[]> {
     // Uses axios and cheerio to get the events on ufc site
     const res = await axios.get('https://www.ufc.com/events');
     const $ = cheerio.load(res.data);
@@ -157,9 +157,9 @@ export class UfcCrawlerService implements CrawlerInterface {
           city +
           ')';
         return {
-          name,
-          date,
-          location,
+          name: name,
+          date: Number(date),
+          location: location,
         };
       })
       .get();

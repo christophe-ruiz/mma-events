@@ -15,11 +15,14 @@
       <change afterPath="$PROJECT_DIR$/src/app.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/app.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/bellator/bellator.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/ufc/ufc.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/models/crawler.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/event.interface.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/models/organization.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ufc/ufc.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ufccrawler/ufc-crawler.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/bellator-crawler/bellator-crawler.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/ufccrawler/ufc-crawler.service.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/app.e2e-spec.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/jest-e2e.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tsconfig.build.json" afterDir="false" />
@@ -33,6 +36,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="tsconfig.json" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -63,6 +67,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projets\mma-events\api\src\controllers" />
+      <recent name="D:\Projets\mma-events\api\src\services" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,7 +82,8 @@
       <option name="presentableId" value="Default" />
       <updated>1684061576418</updated>
       <workItem from="1684061577436" duration="7722000" />
-      <workItem from="1684175782546" duration="7367000" />
+      <workItem from="1684175782546" duration="7428000" />
+      <workItem from="1684226390114" duration="3634000" />
     </task>
     <servers />
   </component>
