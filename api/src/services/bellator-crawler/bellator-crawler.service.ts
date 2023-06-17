@@ -47,11 +47,12 @@ export class BellatorCrawlerService implements CrawlerInterface {
       .map((i, el) => {
         // Retrieves name and location from bellator website. The two first p elements are the name once concatenated and the location is the third and last p element.
         const nameAndLocation = $(el).find('.kRNiwu p');
-        const name = nameAndLocation
+        let name = nameAndLocation
           .slice(0, 2)
           .map((i, el) => $(el).text())
           .get()
-          .join(' ');
+          .join(' (');
+        name += ')';
         const dateString = $(el).find('.hXJIly').text().trim();
         const date = parse(dateString, 'EEEE, MMMM d', new Date()).getTime();
 

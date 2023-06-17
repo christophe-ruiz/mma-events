@@ -108,7 +108,10 @@ export class UfcCrawlerService implements CrawlerInterface {
         // Get the data from each event
         const titleTag = $(el).find('.c-card-event--result__headline > a');
         const name =
-          this.getTitleFromURL(titleTag.attr('href')) + ' - ' + titleTag.text();
+          this.getTitleFromURL(titleTag.attr('href')) +
+          ' (' +
+          titleTag.text() +
+          ')';
         const date = $(el)
           .find('.c-card-event--result__date')
           .attr('data-main-card-timestamp');
@@ -125,7 +128,7 @@ export class UfcCrawlerService implements CrawlerInterface {
           ')';
         return {
           name: name,
-          date: Number(date),
+          date: Number(date) * 1000,
           location: location,
         };
       })
@@ -141,7 +144,10 @@ export class UfcCrawlerService implements CrawlerInterface {
         // Get the data from each event
         const titleTag = $(el).find('.c-card-event--result__headline > a');
         const name =
-          this.getTitleFromURL(titleTag.attr('href')) + ' - ' + titleTag.text();
+          this.getTitleFromURL(titleTag.attr('href')) +
+          ' (' +
+          titleTag.text() +
+          ')';
         const date = $(el)
           .find('.c-card-event--result__date')
           .attr('data-main-card-timestamp');
@@ -158,7 +164,7 @@ export class UfcCrawlerService implements CrawlerInterface {
           ')';
         return {
           name: name,
-          date: Number(date),
+          date: Number(date) * 1000,
           location: location,
         };
       })

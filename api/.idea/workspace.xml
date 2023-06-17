@@ -15,6 +15,8 @@
       <change afterPath="$PROJECT_DIR$/src/app.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/app.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/all/all.controller.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/all/all.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/controllers/bellator/bellator.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/controllers/ufc/ufc.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
@@ -27,6 +29,13 @@
       <change afterPath="$PROJECT_DIR$/test/jest-e2e.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tsconfig.build.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/analysis_options.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/lib/main.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/lib/pages/home.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,21 +61,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Projets\\mma-events\\api\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "D:\\Projets\\mma-events\\api\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projets\mma-events\api\src\controllers" />
@@ -83,7 +94,15 @@
       <updated>1684061576418</updated>
       <workItem from="1684061577436" duration="7722000" />
       <workItem from="1684175782546" duration="7428000" />
-      <workItem from="1684226390114" duration="3634000" />
+      <workItem from="1684226390114" duration="4283000" />
+      <workItem from="1685480808263" duration="599000" />
+      <workItem from="1685552584752" duration="985000" />
+      <workItem from="1686332163161" duration="47000" />
+      <workItem from="1686332223403" duration="263000" />
+      <workItem from="1686569562508" duration="318000" />
+      <workItem from="1686843778473" duration="57000" />
+      <workItem from="1686843863773" duration="1669000" />
+      <workItem from="1686997364114" duration="4333000" />
     </task>
     <servers />
   </component>
